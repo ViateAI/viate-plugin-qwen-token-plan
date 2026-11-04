@@ -1,0 +1,50 @@
+{
+  "name": "@viateai/plugin-qwen-token-plan",
+  "version": "0.0.0",
+  "description": "Viate provider for Alibaba Cloud Model Studio Token Plan chat, embeddings, responses, and Wan image generation.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24",
+    "pnpm": "12.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViateAI/viate-plugin-qwen-token-plan.git"
+  },
+  "viate": {
+    "id": "qwen-cloud-token-plan",
+    "entry": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\""
+  },
+  "peerDependencies": {
+    "@viateai/sdk": "1.0.1"
+  },
+  "devDependencies": {
+    "@viateai/sdk": "1.0.1",
+    "@types/node": "24.10.13",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3"
+  }
+}
