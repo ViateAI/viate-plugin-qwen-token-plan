@@ -1,6 +1,6 @@
 {
   "name": "@viateai/plugin-qwen-token-plan",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Viate provider for Alibaba Cloud Model Studio Token Plan chat, embeddings, responses, and Wan image generation.",
   "license": "MIT",
   "private": false,
